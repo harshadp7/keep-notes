@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='keep_note.css' type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Short+Stack' rel='stylesheet' type='text/css'>    <title>Keep Notes</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+        <a class="navbar-brand" href="#">Keep Notes</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <input type="button" id="addNew" value="Add" />
+                </li>&nbsp;
+                <li class="nav-item active">
+                    <input type="button"  id="refreshNotes" value="View Notes" />
+                </li>&nbsp;
+                <li class="nav-item active">
+                    <input type="button"  id="date" value="Sort by date" />
+                </li>&nbsp;
+                <li class="nav-item active">
+                    <input type="button"  id="subject" value="Sort by subject" />
+                </li>
+            </ul>    
+        <form class="form-inline my-2 my-lg-0">
+            <!-- <input class="form-control mr-sm-2" type="date" placeholder="Select date" id="datepick"/> -->
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" id="Search"/>
+            <input type="button" value="Search" hidden>
+          </form>   
+        </div>  
+    </nav>
+    <div class="list">
+        <div id="dialog" title="Dialog Form">
+            <label>Subject:</label>
+            <input id="subject" name="subject" type="text">
+            <label>Notes:</label>
+            <textarea id="note" name="note" ></textarea>
+            <button id="save" type="button">Save</button>
+            <button id="close" type="button">Close</button>
+
+        </div>
+        <table class="newTasks" id="newTasks">
+            <tr><th>Subject</th><th>Notes</th><th>Date</th><th></th></tr>    
+            <tr class="rows"><td><input class="subject" type="text" id="title-1" value="Get Milk" readonly /></td><td><input class="note" type="text" id="description-1" value="Need to go shopping to pick up milk." readonly /></td><td><input class="date" type="text" id="date-1" value="01-08-2019" readonly/></td><td><i id="delete-1" class="fa fa-trash-o"></td></tr>
+            <tr class="rows"><td><input class="subject" type="text" id="title-2" value="Pay Bills" readonly/></td><td><input class="note" type="text" id="description-2" value="Gas and electric bills due soon." readonly/></td><td><input class="date" type="text" id="date-2" value="24-01-2020" readonly/></td><td><i id="delete-2" class="fa fa-trash-o"></td></tr>
+            <tr class="rows"><td><input class="subject" type="text" id="title-3" value="Take Dogs To Vets" readonly/></td><td><input class="note" type="text" id="description-3" value="Dog needs taking to vets for injection." readonly/></td><td><input class="date" type="text" id="date-3" value="03-06-2020" readonly/></td><td><i id="delete-3" class="fa fa-trash-o"></td></tr>
+            <tr class="rows"><td><input class="subject" type="text" id="title-4" value="Record Tv Program" readonly/></td><td><input class="note" type="text" id="description-4" value="Saving Private Ryan on tv make sure you record it." readonly/></td><td><input class="date" type="text" id="date-4" value="01-12-2020" readonly/></td><td><i id="delete-4" class="fa fa-trash-o"></td></tr>
+            <tr class="rows"><td><input class="subject" type="text" id="title-5" value="Go Doctors" readonly /></td><td><input class="note" type="text" id="description-5" value="Doctors appointment is tomorrow!" readonly/></td><td><input class="date" type="text" id="date-5" value="01-04-2022" readonly/></td><td><i id="delete-5" class="fa fa-trash-o"></td></tr>
+        </table>
+    </div>   
+    <section class="notes">
+      <ul class="sticky_notes"><li></li></ul>
+    </section>
+    </div>        
+</body>
+<script src="Keep_notes.js" type="text/javascript"></script>
+</html>
